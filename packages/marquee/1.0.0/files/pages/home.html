@@ -1,0 +1,44 @@
+<!-- Home: a rotating hero of new titles, then one rail per row. -->
+<section class="mq-hero" data-kn-if="featured" data-kn-carousel="9s" aria-label="Featured">
+  <article class="mq-slide" data-kn-each="featured" data-kn-bg="backdrop" data-kn-size="1920">
+    <div class="mq-slide-body">
+      <img class="mq-logo" data-kn-if="hasLogo" data-kn-img="logo" data-kn-size="640">
+      <h1 class="mq-title" data-kn-if="!hasLogo" data-kn-text="title"></h1>
+      <p class="mq-meta">
+        <span data-kn-text="year"></span>
+        <span class="mq-rated" data-kn-text="officialRating"></span>
+        <span data-kn-text="runtimeLabel"></span>
+        <span data-kn-text="genresLabel"></span>
+      </p>
+      <p class="mq-overview" data-kn-text="overview"></p>
+      <div class="mq-actions">
+        <button class="mq-btn mq-btn-play" data-kn-action="play" data-kn-focus-default>Play</button>
+        <a class="mq-btn mq-btn-ghost" data-kn-link="item">More info</a>
+      </div>
+    </div>
+  </article>
+  <div class="mq-dots" data-kn-carousel-dots></div>
+</section>
+
+<div class="mq-rows">
+  <section class="mq-row" data-kn-each="rows" data-kn-focus-group="row" data-kn-attr="data-row:kind">
+    <h2 class="mq-row-title" data-kn-text="title"></h2>
+    <div class="mq-rail-wrap">
+      <button class="mq-scroll mq-scroll-prev" data-kn-scroll="prev" aria-label="Scroll back"></button>
+      <div class="mq-rail" data-kn-rail data-kn-focus-scroll="nearest" data-kn-switch="kind">
+        <div class="mq-contents" data-kn-case="continue">
+          <a class="mq-card mq-card-wide" data-kn-each="items" data-kn-link="play" data-kn-use="card-wide"></a>
+        </div>
+        <div class="mq-contents" data-kn-default>
+          <a class="mq-card" data-kn-each="items" data-kn-link="item" data-kn-use="card"></a>
+        </div>
+      </div>
+      <button class="mq-scroll mq-scroll-next" data-kn-scroll="next" aria-label="Scroll forward"></button>
+    </div>
+  </section>
+</div>
+
+<div class="mq-empty" data-kn-if="isEmpty">
+  <h1>Nothing here yet</h1>
+  <p>Once a library has been scanned, new titles show up here.</p>
+</div>

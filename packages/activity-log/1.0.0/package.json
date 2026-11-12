@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "id": "activity-log",
+  "kind": "module",
+  "name": "Activity log",
+  "description": "Keeps a history of playback, library scans and new users in Admin > Activity.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry",
+  "module": {
+    "abi": 1,
+    "provides": [
+      "event_subscriber"
+    ],
+    "permissions": {
+      "activity": true
+    },
+    "settings": [],
+    "entry": "module.wasm"
+  },
+  "files": [
+    {
+      "path": "module.wasm",
+      "size": 138862,
+      "sha256": "1c0f81a915fa4fc3c800e6a6abe86b2f1dd3b9a568d674e8cecab318f7648047"
+    }
+  ],
+  "source_sha256": "98f1ca5ecd3d6392a0859ea917c1eba1026ab296019f74bc63d8604541fb45b8",
+  "published_at": 1794443198909
+}

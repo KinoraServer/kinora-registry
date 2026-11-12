@@ -1,0 +1,23 @@
+{
+  "id": "oled",
+  "name": "OLED Black",
+  "author": "Kinora",
+  "scheme": "dark",
+  "tokens": {
+    "background": "oklch(0 0 0)",
+    "foreground": "oklch(0.96 0 0)",
+    "card": "oklch(0.13 0 0)",
+    "card-foreground": "oklch(0.96 0 0)",
+    "muted": "oklch(0.2 0 0)",
+    "muted-foreground": "oklch(0.68 0 0)",
+    "primary": "oklch(0.96 0 0)",
+    "primary-foreground": "oklch(0 0 0)",
+    "accent": "oklch(0.22 0 0)",
+    "accent-foreground": "oklch(0.96 0 0)",
+    "border": "oklch(0.24 0 0)",
+    "ring": "oklch(0.8 0 0)",
+    "destructive": "oklch(0.63 0.21 25)",
+    "radius": "0.5rem",
+    "font-sans": "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+  }
+}

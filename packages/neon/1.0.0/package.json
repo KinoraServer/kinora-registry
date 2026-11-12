@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "id": "neon",
+  "kind": "player-skin",
+  "name": "Neon",
+  "description": "A glowing video player skin. Also a small, readable example to start your own skin from.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry",
+  "files": [
+    {
+      "path": "skin.css",
+      "size": 2853,
+      "sha256": "37dfa7b655fc3afb63f3abdbdced6b987fdc7436a87077f02386990b7d7759a5"
+    },
+    {
+      "path": "skin.html",
+      "size": 1791,
+      "sha256": "896550dbffc331dde10504c72c4f69d6fed97a3988a469633f11250271510bb3"
+    },
+    {
+      "path": "skin.json",
+      "size": 59,
+      "sha256": "1cbaba9b830ffd6a0a0e503daaca9d16dd9ca8a55c53692c40d36d9901b24089"
+    }
+  ],
+  "source_sha256": "c2ee6171ea92ddfafa5edf1c12b2296f4bb80d50ac14f89499b6031fbc4e149b",
+  "published_at": 1794443198909
+}

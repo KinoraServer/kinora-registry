@@ -1,0 +1,20 @@
+{
+  "format": 1,
+  "id": "ember",
+  "kind": "theme",
+  "name": "Ember",
+  "description": "A warm dark theme with an orange accent and rounder corners.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry",
+  "files": [
+    {
+      "path": "ember.json",
+      "size": 745,
+      "sha256": "84e6f064d24b75d112b9f204b1d01ca79431ed582aaf8add2c3cabe02bc3455e"
+    }
+  ],
+  "source_sha256": "ea6baf8a0e756012167a92c50c0cd86e09a2978e652b619654b8f5dbb72b37ac",
+  "published_at": 1794443198909
+}

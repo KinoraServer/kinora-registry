@@ -1,0 +1,180 @@
+{
+  "format": 1,
+  "packages": [
+    {
+      "id": "activity-log",
+      "kind": "module",
+      "name": "Activity log",
+      "description": "Keeps a history of playback, library scans and new users in Admin > Activity.",
+      "author": "Kinora",
+      "license": "GPL-2.0-only",
+      "homepage": "https://github.com/KinoraServer/kinora-registry",
+      "recommended": false,
+      "provides": [
+        "event_subscriber"
+      ],
+      "permissions": {
+        "activity": true
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "abi": 1,
+          "size": 138862,
+          "published_at": 1794443198909,
+          "manifest": "packages/activity-log/1.0.0/package.json",
+          "sha256": "5ef56221f6f84076b5e7e4c36c11e422c67ef7cd38b3ff152b655fdc1990f84a"
+        }
+      ]
+    },
+    {
+      "id": "auto-tracks",
+      "kind": "module",
+      "name": "Auto audio & subtitles",
+      "description": "Remembers the audio and subtitle tracks each viewer picks for a show and picks the closest match on every other episode, on every device.",
+      "author": "Kinora",
+      "license": "GPL-2.0-only",
+      "homepage": "https://github.com/KinoraServer/kinora-registry",
+      "recommended": true,
+      "provides": [
+        "track_selection"
+      ],
+      "permissions": {
+        "storage": true
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "abi": 1,
+          "size": 230433,
+          "published_at": 1794443198909,
+          "manifest": "packages/auto-tracks/1.0.0/package.json",
+          "sha256": "e5148a0bb09e70f8844d7d6daad214eb99363981dc222a3e6e0515e1dd9fd9f2"
+        }
+      ]
+    },
+    {
+      "id": "ember",
+      "kind": "theme",
+      "name": "Ember",
+      "description": "A warm dark theme with an orange accent and rounder corners.",
+      "author": "Kinora",
+      "license": "GPL-2.0-only",
+      "homepage": "https://github.com/KinoraServer/kinora-registry",
+      "recommended": false,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 745,
+          "published_at": 1794443198909,
+          "manifest": "packages/ember/1.0.0/package.json",
+          "sha256": "2f28f5333744ead5d5e67b2662635cc6cf8f8b889ffc5619f53587870a8c0a91"
+        }
+      ]
+    },
+    {
+      "id": "marquee",
+      "kind": "app-skin",
+      "name": "Marquee",
+      "description": "A big rotating hero, rails of landscape cards and full-bleed detail pages. Made for the living room.",
+      "author": "Kinora",
+      "license": "GPL-2.0-only",
+      "homepage": "https://github.com/KinoraServer/kinora-registry",
+      "recommended": false,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 37618,
+          "published_at": 1794443198909,
+          "manifest": "packages/marquee/1.0.0/package.json",
+          "sha256": "ffb569e1204ba9cdba954271f991d9c2d9e3f193cb53c8067f457c9b6623c0c4"
+        }
+      ]
+    },
+    {
+      "id": "midnight",
+      "kind": "theme",
+      "name": "Midnight & Daylight",
+      "description": "A cool blue-grey pair: Midnight in dark mode, Daylight in light mode.",
+      "author": "Kinora",
+      "license": "GPL-2.0-only",
+      "homepage": "https://github.com/KinoraServer/kinora-registry",
+      "recommended": false,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 1528,
+          "published_at": 1794443198909,
+          "manifest": "packages/midnight/1.0.0/package.json",
+          "sha256": "a3142350d278e6175d1f78ad6dc310828f446aecfcf4aee6021d3c8e0c516b83"
+        }
+      ]
+    },
+    {
+      "id": "neon",
+      "kind": "player-skin",
+      "name": "Neon",
+      "description": "A glowing video player skin. Also a small, readable example to start your own skin from.",
+      "author": "Kinora",
+      "license": "GPL-2.0-only",
+      "homepage": "https://github.com/KinoraServer/kinora-registry",
+      "recommended": false,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 4703,
+          "published_at": 1794443198909,
+          "manifest": "packages/neon/1.0.0/package.json",
+          "sha256": "bd0b2f94ada784600d6054d1c9a020d92c8d3cbe0016da725adf10f05ca56ec2"
+        }
+      ]
+    },
+    {
+      "id": "oled",
+      "kind": "theme",
+      "name": "OLED Black",
+      "description": "True black with white accents, for OLED screens.",
+      "author": "Kinora",
+      "license": "GPL-2.0-only",
+      "homepage": "https://github.com/KinoraServer/kinora-registry",
+      "recommended": false,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 693,
+          "published_at": 1794443198909,
+          "manifest": "packages/oled/1.0.0/package.json",
+          "sha256": "5268e5f8840f52f82c6ad8d446058c7d62a6243f84b95379ee57e1e10110f30a"
+        }
+      ]
+    },
+    {
+      "id": "tmdb",
+      "kind": "module",
+      "name": "TMDB metadata",
+      "description": "Titles, descriptions, artwork and ratings for movies and TV from The Movie Database.",
+      "author": "Kinora",
+      "license": "GPL-2.0-only",
+      "homepage": "https://github.com/KinoraServer/kinora-registry",
+      "recommended": true,
+      "provides": [
+        "metadata_provider"
+      ],
+      "permissions": {
+        "http": [
+          "api.themoviedb.org"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "abi": 1,
+          "size": 176755,
+          "published_at": 1794443198909,
+          "manifest": "packages/tmdb/1.0.0/package.json",
+          "sha256": "2efff3380a24231ec529f61552c0c8c3ad9fb3f4461aab090a35af0841135bf8"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<!-- A library: a poster grid with a sticky sort bar. -->
+<section class="mq-page">
+  <header class="mq-page-head">
+    <h1 data-kn-text="library.name"></h1>
+    <span class="mq-count" data-kn-text="countLabel"></span>
+    <span class="mq-grow"></span>
+    <select class="mq-select" data-kn-select="sort" aria-label="Sort by"></select>
+  </header>
+  <div class="mq-grid">
+    <a class="mq-poster" data-kn-each="items" data-kn-virtual data-kn-link="item" data-kn-use="poster"></a>
+  </div>
+  <p class="mq-hint" data-kn-if="isEmpty">This library is empty. If you just added it, the scan may still be running.</p>
+</section>

@@ -1,0 +1,101 @@
+{
+  "format": 1,
+  "id": "marquee",
+  "kind": "app-skin",
+  "name": "Marquee",
+  "description": "A big rotating hero, rails of landscape cards and full-bleed detail pages. Made for the living room.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry",
+  "recommended": false,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 603,
+      "sha256": "41ac51a84422d1bc55dca07b37bd6c0c8d4828ea1fa842f3c76e53eebb824818"
+    },
+    {
+      "path": "pages/home.html",
+      "size": 2113,
+      "sha256": "ad2c80723c2f6027d4ecfab4306460fa13008f18f29c9c94c0dd6db336af9414"
+    },
+    {
+      "path": "pages/home.tv.html",
+      "size": 1728,
+      "sha256": "108b83579c10efdbf7d75e7a3bd1e0071ba52c32167538729feb1a5c12678aac"
+    },
+    {
+      "path": "pages/item.html",
+      "size": 2326,
+      "sha256": "3e6bca812126663bef99db8f972d081e4dcda841b05b7978b092199faaa7e089"
+    },
+    {
+      "path": "pages/item.series.html",
+      "size": 1777,
+      "sha256": "62e9f210a2d462c0f1a0351ac786aee8f355d27bf1e14e10db9ee1a5a2e3c8d2"
+    },
+    {
+      "path": "pages/library.html",
+      "size": 622,
+      "sha256": "ed7869dd4bfcd589b093ade394d7e75e70cedd0246216c6003d63b6aea722996"
+    },
+    {
+      "path": "pages/search.html",
+      "size": 620,
+      "sha256": "02c275e1b675ef5ca29f8f616f70c58a43268130c021bd9cb5c086ba533ae14e"
+    },
+    {
+      "path": "partials/card-wide.html",
+      "size": 447,
+      "sha256": "13264fc3c8afa6184363cae7afc43c9da43f24116e17bba09fcf45d0b3b035e3"
+    },
+    {
+      "path": "partials/card.html",
+      "size": 546,
+      "sha256": "db3aa52382cf6c890faa367cee863b462a130c5fe83347b4f97f22a43eed80d4"
+    },
+    {
+      "path": "partials/episode.html",
+      "size": 628,
+      "sha256": "7dfca62fb5a350b13c6b781890df4943d1b483ed1a42f8fe46cc831487f3e14f"
+    },
+    {
+      "path": "partials/poster.html",
+      "size": 438,
+      "sha256": "3847272e23663e4bd84e023217803a301ca60f699059b1d5534e7ef11b076b87"
+    },
+    {
+      "path": "player/skin.css",
+      "size": 3132,
+      "sha256": "7eb701d770b07af2eb930f7d1b6542f5279a49783a2e3d7e6ce24674bf63182a"
+    },
+    {
+      "path": "player/skin.html",
+      "size": 1959,
+      "sha256": "c39c4f36644d284139173f7470a98e273875f2b50928de0f1892e937db1b0756"
+    },
+    {
+      "path": "shell.html",
+      "size": 1610,
+      "sha256": "d385bf473997f20c0efedd9de6f8fb2e02cf112f8e8ea42696e87e22c86b886c"
+    },
+    {
+      "path": "skin.css",
+      "size": 17885,
+      "sha256": "29075c3e5d2bb4424b5c2b2a140557fc73c2004ab99816faf4e283b7901d638d"
+    },
+    {
+      "path": "skin.json",
+      "size": 674,
+      "sha256": "fbba3fc1a7d569d8d2cb77eb40bde017ece300a5a0fa79dc7bab09cb0278d61f"
+    },
+    {
+      "path": "themes/marquee-dark.json",
+      "size": 510,
+      "sha256": "16bd13775a79cbfd3cb96e34aacd307b7e96649db590dabf0249826acd52a47e"
+    }
+  ],
+  "source_sha256": "e8fe87ef686b646788f983162d520ad400d6a87c8cdad5b53b90e93de42fa8fd",
+  "published_at": 1794443198909
+}

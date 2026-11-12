@@ -1,0 +1,25 @@
+{
+  "format": 1,
+  "id": "midnight",
+  "kind": "theme",
+  "name": "Midnight & Daylight",
+  "description": "A cool blue-grey pair: Midnight in dark mode, Daylight in light mode.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry",
+  "files": [
+    {
+      "path": "daylight.json",
+      "size": 756,
+      "sha256": "05b87fdb536fa7923bcf12341d8a4cf1dd9db54bbad5f9cb0f669b904ed76da8"
+    },
+    {
+      "path": "midnight.json",
+      "size": 772,
+      "sha256": "799550198cfb31a883bb5e2f9423d3042c4ac4fde97dfeec1ae37b0ab9b9ba40"
+    }
+  ],
+  "source_sha256": "366aa532219805d11a281a104f383e3123426dea959e531fa595b0e13d62ca96",
+  "published_at": 1794443198909
+}

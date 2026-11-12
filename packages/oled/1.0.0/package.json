@@ -1,0 +1,20 @@
+{
+  "format": 1,
+  "id": "oled",
+  "kind": "theme",
+  "name": "OLED Black",
+  "description": "True black with white accents, for OLED screens.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry",
+  "files": [
+    {
+      "path": "oled.json",
+      "size": 693,
+      "sha256": "efeb6c371726a280a0694b177312ac037597e254520fa55378e9f4cd58b82899"
+    }
+  ],
+  "source_sha256": "41b15ac361a919d58c5104678b5b37f11495e9f5c67c01da6bbf693fa95754b6",
+  "published_at": 1794443198909
+}

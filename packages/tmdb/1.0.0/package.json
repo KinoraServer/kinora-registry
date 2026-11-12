@@ -1,0 +1,47 @@
+{
+  "format": 1,
+  "id": "tmdb",
+  "kind": "module",
+  "name": "TMDB metadata",
+  "description": "Titles, descriptions, artwork and ratings for movies and TV from The Movie Database.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry",
+  "recommended": true,
+  "module": {
+    "abi": 1,
+    "provides": [
+      "metadata_provider"
+    ],
+    "permissions": {
+      "http": [
+        "api.themoviedb.org"
+      ]
+    },
+    "settings": [
+      {
+        "key": "api_key",
+        "label": "API key or read access token",
+        "kind": "secret",
+        "help": "Free at themoviedb.org → Settings → API."
+      },
+      {
+        "key": "language",
+        "label": "Metadata language",
+        "kind": "text",
+        "help": "For example en-US, de-DE, ja-JP."
+      }
+    ],
+    "entry": "module.wasm"
+  },
+  "files": [
+    {
+      "path": "module.wasm",
+      "size": 176755,
+      "sha256": "8a07cad19ef92bb9ec6b4b377000fb7894054cf130ff3d8611cecd6ef127c87e"
+    }
+  ],
+  "source_sha256": "a9df760df4ecb7457ba88cf6b0ffccf80c0ac4751a41f13d9dfe82088bf214c3",
+  "published_at": 1794443198909
+}
