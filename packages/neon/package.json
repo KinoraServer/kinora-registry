@@ -1,0 +1,10 @@
+{
+  "id": "neon",
+  "kind": "player-skin",
+  "name": "Neon",
+  "description": "A glowing video player skin. Also a small, readable example to start your own skin from.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry"
+}

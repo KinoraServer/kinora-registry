@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/KinoraServer/kinora-registry/main/schema/package.schema.json",
+  "title": "Kinora registry package",
+  "description": "A package.json in packages/<id>/. The published manifest adds format, files, source_sha256 and published_at, and replaces module.crate with module.entry.",
+  "type": "object",
+  "required": ["id", "kind", "name", "description", "version", "author", "license"],
+  "properties": {
+    "format": { "const": 1 },
+    "id": { "$ref": "#/$defs/id" },
+    "kind": { "enum": ["module", "theme", "player-skin", "app-skin"] },
+    "name": { "type": "string", "minLength": 1, "maxLength": 60 },
+    "description": { "type": "string", "minLength": 1, "maxLength": 300 },
+    "version": { "$ref": "#/$defs/version" },
+    "min_kinora": { "$ref": "#/$defs/version" },
+    "author": { "type": "string", "minLength": 1 },
+    "license": { "type": "string", "minLength": 1, "description": "An SPDX id." },
+    "homepage": { "type": "string", "pattern": "^https://" },
+    "recommended": { "type": "boolean" },
+    "module": {
+      "type": "object",
+      "required": ["abi", "provides"],
+      "properties": {
+        "abi": { "const": 1 },
+        "crate": { "type": "string", "description": "Source only: the Cargo package name." },
+        "entry": { "const": "module.wasm", "description": "Published only." },
+        "provides": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "enum": ["metadata_provider", "track_selection", "event_subscriber"] }
+        },
+        "permissions": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "http": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "pattern": "^[a-z0-9]([a-z0-9.-]*[a-z0-9])?$", "maxLength": 253 }
+            },
+            "storage": { "type": "boolean" },
+            "activity": { "type": "boolean" }
+          }
+        },
+        "settings": {
+          "type": "array",
+          "maxItems": 40,
+          "items": {
+            "type": "object",
+            "required": ["key", "label", "kind"],
+            "additionalProperties": false,
+            "properties": {
+              "key": { "type": "string", "pattern": "^[a-z][a-z0-9_]{0,39}$" },
+              "label": { "type": "string", "minLength": 1 },
+              "kind": { "enum": ["text", "secret", "bool"] },
+              "default": { "type": "string" },
+              "help": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "files": {
+      "description": "Published only.",
+      "type": "array",
+      "maxItems": 300,
+      "items": {
+        "type": "object",
+        "required": ["path", "size", "sha256"],
+        "additionalProperties": false,
+        "properties": {
+          "path": { "type": "string", "maxLength": 200 },
+          "size": { "type": "integer", "minimum": 0, "maximum": 4194304 },
+          "sha256": { "$ref": "#/$defs/sha256" }
+        }
+      }
+    },
+    "source_sha256": { "$ref": "#/$defs/sha256" },
+    "published_at": { "type": "integer", "description": "Milliseconds since 1970." }
+  },
+  "if": { "properties": { "kind": { "const": "module" } } },
+  "then": { "required": ["module"] },
+  "else": { "not": { "required": ["module"] } },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,63}$" },
+    "version": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$" },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  }
+}

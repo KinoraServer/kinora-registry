@@ -1,0 +1,31 @@
+<!-- The frame around every page. data-kn-slot="outlet" is where the page goes. -->
+<div class="mq-app">
+  <header class="mq-top">
+    <a class="mq-brand" data-kn-link="home">
+      <span class="mq-mark" aria-hidden="true"></span>
+      <span class="mq-brand-name" data-kn-text="app.server.name"></span>
+    </a>
+    <nav class="mq-nav" aria-label="Libraries" data-kn-focus-group="nav">
+      <a data-kn-link="home">Home</a>
+      <a data-kn-each="app.libraries" data-kn-link="library" data-kn-text="name"></a>
+    </nav>
+    <div class="mq-tools" data-kn-focus-group="tools">
+      <label class="mq-search">
+        <span class="mq-search-icon" aria-hidden="true"></span>
+        <input type="search" data-kn-search placeholder="Search titles" aria-label="Search">
+      </label>
+      <a class="mq-search-link" data-kn-link="search" aria-label="Search"><span class="mq-search-icon" aria-hidden="true"></span></a>
+      <button class="mq-avatar" popovertarget="account" aria-label="Account menu">
+        <img data-kn-if="app.user.hasAvatar" data-kn-img="avatar" data-kn-size="160">
+        <span data-kn-if="!app.user.hasAvatar" data-kn-text="app.user.initial"></span>
+      </button>
+      <div id="account" class="mq-menu" popover>
+        <p class="mq-menu-name" data-kn-text="app.user.name"></p>
+        <a data-kn-link="settings">Settings</a>
+        <span data-kn-if="app.user.isAdmin" class="mq-contents"><a data-kn-link="admin">Admin</a></span>
+        <button data-kn-action="logout">Sign out</button>
+      </div>
+    </div>
+  </header>
+  <main class="mq-main" data-kn-slot="outlet"></main>
+</div>

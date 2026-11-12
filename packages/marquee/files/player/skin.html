@@ -1,0 +1,37 @@
+<!-- Marquee's player: a title at the top, a thin red seek bar and a quiet control row. -->
+<div class="top">
+  <button class="icon back" data-kn-action="back" aria-label="Back"></button>
+  <span class="title" data-kn-text="title"></span>
+  <button class="icon info" data-kn-action="info" aria-label="Playback info">i</button>
+</div>
+
+<div class="stats">
+  <span data-kn-text="method"></span> · <span data-kn-text="resolution"></span> · buffer <span data-kn-text="buffer"></span>
+</div>
+
+<button class="big" data-kn-action="play" aria-label="Play or pause"><span class="glyph"></span></button>
+
+<div class="bottom" data-kn-bar>
+  <div class="seekrow">
+    <div class="seek" data-kn-seek>
+      <div class="buffer" data-kn-buffer></div>
+      <div class="fill" data-kn-fill></div>
+      <div class="dot" data-kn-thumb></div>
+    </div>
+    <span class="remaining" data-kn-text="remaining"></span>
+  </div>
+  <div class="row">
+    <button class="icon play" data-kn-action="play" aria-label="Play or pause"><span class="glyph"></span></button>
+    <button class="icon" data-kn-action="skip-back" aria-label="Back 10 seconds">−10</button>
+    <button class="icon" data-kn-action="skip-forward" aria-label="Forward 10 seconds">+10</button>
+    <button class="icon mute" data-kn-action="mute" aria-label="Mute"><span class="glyph"></span></button>
+    <div class="vol" data-kn-volume><div class="fill" data-kn-fill></div></div>
+    <span class="grow"></span>
+    <select data-kn-select="audio" aria-label="Audio"></select>
+    <select data-kn-select="subtitles" aria-label="Subtitles"></select>
+    <button class="icon" data-kn-action="subtitle-position" aria-label="Subtitle position">⇕</button>
+    <select data-kn-select="speed" aria-label="Speed"></select>
+    <button class="icon" data-kn-action="pip" aria-label="Picture in picture">⧉</button>
+    <button class="icon" data-kn-action="fullscreen" aria-label="Full screen">⛶</button>
+  </div>
+</div>

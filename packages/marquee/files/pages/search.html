@@ -1,0 +1,10 @@
+<!-- Search: a big field and a poster grid of results. -->
+<section class="mq-page">
+  <input class="mq-search-big" type="search" data-kn-search placeholder="Search titles" aria-label="Search" data-kn-focus-default>
+  <p class="mq-hint" data-kn-if="!hasQuery">Start typing to search every library.</p>
+  <p class="mq-hint" data-kn-if="isEmpty">Nothing found for “<span data-kn-text="query"></span>”.</p>
+  <p class="mq-count" data-kn-if="results" data-kn-text="countLabel"></p>
+  <div class="mq-grid">
+    <a class="mq-poster" data-kn-each="results" data-kn-link="item" data-kn-use="poster"></a>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+{
+  "id": "midnight",
+  "kind": "theme",
+  "name": "Midnight & Daylight",
+  "description": "A cool blue-grey pair: Midnight in dark mode, Daylight in light mode.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry"
+}

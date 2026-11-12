@@ -1,0 +1,11 @@
+[package]
+name = "kinora-module-sdk"
+description = "What a Kinora module is written against: the request it gets and the host functions it may call."
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true

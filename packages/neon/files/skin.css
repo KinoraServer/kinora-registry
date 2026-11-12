@@ -1,0 +1,50 @@
+/* Your CSS only applies inside this skin, and can use the theme's colours. */
+/* Attributes on the skin: data-playing, data-buffering, data-muted, data-fullscreen, data-controls, data-info */
+
+font-family: var(--kn-font-sans);
+color: var(--kn-foreground);
+transition: opacity 0.25s;
+
+&[data-controls="hidden"] { opacity: 0; }
+
+button, select {
+  background: color-mix(in oklab, var(--kn-card) 80%, transparent);
+  color: inherit;
+  border: 1px solid var(--kn-primary);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font: inherit;
+  font-size: 13px;
+  text-shadow: 0 0 8px var(--kn-primary);
+}
+button:hover { background: var(--kn-primary); color: var(--kn-primary-foreground); }
+
+.top { position: absolute; inset: 0 0 auto 0; display: flex; gap: 12px; align-items: center; padding: 16px; background: linear-gradient(#000c, transparent); }
+.title { flex: 1; font-size: 18px; letter-spacing: 0.08em; text-transform: uppercase; text-shadow: 0 0 12px var(--kn-primary); }
+
+.stats { position: absolute; top: 64px; right: 16px; padding: 8px 12px; background: #000c; border: 1px solid var(--kn-primary); border-radius: 4px; font-size: 12px; display: none; }
+&[data-info="true"] .stats { display: block; }
+
+.big { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 88px; height: 88px; border-radius: 50%; font-size: 28px; box-shadow: 0 0 32px var(--kn-primary); }
+.icon-pause { display: none; }
+&[data-playing="true"] .icon-play { display: none; }
+&[data-playing="true"] .icon-pause { display: inline; }
+&[data-playing="true"] .big { opacity: 0; }
+
+.bottom { position: absolute; inset: auto 0 0 0; padding: 16px; background: linear-gradient(transparent, #000d); }
+.seek { position: relative; height: 8px; border-radius: 4px; background: #fff3; cursor: pointer; margin-bottom: 12px; }
+.seek .buffer { position: absolute; inset: 0 auto 0 0; background: #fff4; border-radius: 4px; }
+.seek .fill { position: absolute; inset: 0 auto 0 0; background: var(--kn-primary); border-radius: 4px; box-shadow: 0 0 12px var(--kn-primary); }
+.seek .dot { position: absolute; top: 50%; width: 16px; height: 16px; translate: -50% -50%; border-radius: 50%; background: var(--kn-primary); box-shadow: 0 0 12px var(--kn-primary); }
+
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.grow { flex: 1; }
+.time { font-variant-numeric: tabular-nums; font-size: 13px; }
+.vol { position: relative; width: 80px; height: 6px; border-radius: 3px; background: #fff3; cursor: pointer; }
+.vol .fill { position: absolute; inset: 0 auto 0 0; background: var(--kn-primary); border-radius: 3px; }
+.vol-off { display: none; }
+&[data-muted="true"] .vol-on { display: none; }
+&[data-muted="true"] .vol-off { display: inline; }
+
+@keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+&[data-buffering="true"] .time { animation: pulse 1s infinite; }

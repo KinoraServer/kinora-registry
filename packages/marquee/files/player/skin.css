@@ -1,0 +1,73 @@
+/* Scoped to the player; top-level declarations style the player root. */
+font-family: var(--kn-font-sans);
+color: #fff;
+transition: opacity 0.3s;
+
+&[data-controls="hidden"] { opacity: 0; cursor: none; }
+
+button, select {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  font: inherit;
+  font-size: 15px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+button:hover, select:hover { background: rgb(255 255 255 / 0.12); }
+button:focus-visible, select:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+select { background: rgb(0 0 0 / 0.4); max-width: 11rem; }
+select option { color: #000; }
+
+.top {
+  position: absolute; inset: 0 0 auto 0; display: flex; gap: 12px; align-items: center;
+  padding: 20px 28px; background: linear-gradient(rgb(0 0 0 / 0.75), transparent);
+}
+.title { flex: 1; font-size: 20px; font-weight: 600; }
+.back::before { content: "←"; font-size: 22px; }
+
+.stats {
+  position: absolute; top: 76px; right: 28px; display: none; padding: 8px 12px;
+  background: rgb(0 0 0 / 0.75); border-radius: 6px; font-size: 13px;
+}
+&[data-info="true"] .stats { display: block; }
+
+.big {
+  position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 96px; height: 96px;
+  border-radius: 50%; background: rgb(0 0 0 / 0.45); border: 2px solid rgb(255 255 255 / 0.85);
+  transition: opacity 0.2s, scale 0.2s;
+}
+.big:hover { scale: 1.06; background: rgb(0 0 0 / 0.6); }
+&[data-playing="true"] .big { opacity: 0; pointer-events: none; }
+
+.glyph::before { content: "▶"; }
+&[data-playing="true"] .play .glyph::before { content: "❚❚"; letter-spacing: -2px; }
+.big .glyph::before { font-size: 34px; margin-left: 6px; }
+.mute .glyph::before { content: "🔊"; }
+&[data-muted="true"] .mute .glyph::before { content: "🔇"; }
+
+.bottom { position: absolute; inset: auto 0 0 0; padding: 16px 28px 22px; background: linear-gradient(transparent, rgb(0 0 0 / 0.85)); }
+.seekrow { display: flex; align-items: center; gap: 16px; margin-bottom: 10px; }
+.seek { position: relative; flex: 1; height: 4px; background: rgb(255 255 255 / 0.25); transition: height 0.15s; }
+.seek:hover { height: 7px; }
+.seek .buffer { position: absolute; inset: 0 auto 0 0; background: rgb(255 255 255 / 0.35); }
+.seek .fill { position: absolute; inset: 0 auto 0 0; background: var(--kn-primary); }
+.seek .dot {
+  position: absolute; top: 50%; width: 15px; height: 15px; translate: -50% -50%; border-radius: 50%;
+  background: var(--kn-primary); scale: 0; transition: scale 0.15s;
+}
+.seek:hover .dot { scale: 1; }
+.remaining { font-variant-numeric: tabular-nums; font-size: 14px; opacity: 0.9; }
+
+.row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.grow { flex: 1; }
+.vol { position: relative; width: 90px; height: 4px; background: rgb(255 255 255 / 0.25); }
+.vol .fill { position: absolute; inset: 0 auto 0 0; background: #fff; }
+
+@keyframes mq-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+&[data-buffering="true"] .remaining { animation: mq-pulse 1s infinite; }
+
+@media (max-width: 640px) {
+  .top, .bottom { padding-inline: 14px; }
+  .vol, select[data-kn-select="speed"] { display: none; }
+}

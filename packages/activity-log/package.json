@@ -1,0 +1,21 @@
+{
+  "id": "activity-log",
+  "kind": "module",
+  "name": "Activity log",
+  "description": "Keeps a history of playback, library scans and new users in Admin > Activity.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry",
+  "module": {
+    "abi": 1,
+    "crate": "kinora-activity-log",
+    "provides": [
+      "event_subscriber"
+    ],
+    "permissions": {
+      "activity": true
+    },
+    "settings": []
+  }
+}

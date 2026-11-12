@@ -1,0 +1,45 @@
+<!-- Movies, seasons and episodes. Series have their own page (item.series.html). -->
+<article class="mq-detail">
+  <div class="mq-detail-bg" data-kn-bg="backdrop" data-kn-size="1920"></div>
+  <div class="mq-detail-body">
+    <a class="mq-crumb" data-kn-if="seriesId" data-kn-link="series" data-kn-text="seriesTitle"></a>
+    <img class="mq-logo" data-kn-if="hasLogo" data-kn-img="logo" data-kn-size="640">
+    <h1 class="mq-title" data-kn-if="!hasLogo" data-kn-text="title"></h1>
+    <h2 class="mq-episode-title" data-kn-if="kind=episode">
+      <span data-kn-text="episodeCode"></span> · <span data-kn-text="episodeTitle"></span>
+    </h2>
+    <p class="mq-meta">
+      <span data-kn-text="year"></span>
+      <span class="mq-rated" data-kn-text="officialRating"></span>
+      <span data-kn-text="runtimeLabel"></span>
+      <span class="mq-star" data-kn-text="rating"></span>
+      <span data-kn-text="genresLabel"></span>
+    </p>
+    <p class="mq-tagline" data-kn-text="tagline"></p>
+    <div class="mq-actions" data-kn-focus-group="actions">
+      <button class="mq-btn mq-btn-play" data-kn-if="canPlay" data-kn-action="play" data-kn-text="playLabel" data-kn-focus-default></button>
+      <button class="mq-btn" data-kn-if="canResume" data-kn-action="restart">From the start</button>
+      <button class="mq-btn mq-btn-ghost" data-kn-action="toggle-played" data-kn-text="playedLabel"></button>
+    </div>
+    <div class="mq-progress" data-kn-if="canResume" data-kn-progress="progress"><i data-kn-fill></i></div>
+    <p class="mq-overview mq-overview-full" data-kn-text="overview"></p>
+    <details class="mq-files" data-kn-if="hasFiles">
+      <summary>File info</summary>
+      <dl data-kn-each="files">
+        <dt data-kn-text="name"></dt>
+        <dd><span data-kn-text="container"></span> · <span data-kn-text="sizeLabel"></span></dd>
+        <dd data-kn-text="videoLabel"></dd>
+        <dd data-kn-text="audioLabel"></dd>
+        <dd data-kn-text="subtitleLabel"></dd>
+      </dl>
+    </details>
+  </div>
+
+  <section class="mq-section" data-kn-if="hasEpisodes">
+    <h2 class="mq-row-title">Episodes</h2>
+    <ol class="mq-episodes">
+      <li data-kn-each="episodes"><a class="mq-episode" data-kn-link="play" data-kn-use="episode"></a></li>
+    </ol>
+  </section>
+  <div data-kn-slot="extras"></div>
+</article>

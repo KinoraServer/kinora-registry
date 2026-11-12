@@ -1,0 +1,34 @@
+<!-- A series: the next episode to play, season tabs and the chosen season's episodes. -->
+<article class="mq-detail">
+  <div class="mq-detail-bg" data-kn-bg="backdrop" data-kn-size="1920"></div>
+  <div class="mq-detail-body">
+    <img class="mq-logo" data-kn-if="hasLogo" data-kn-img="logo" data-kn-size="640">
+    <h1 class="mq-title" data-kn-if="!hasLogo" data-kn-text="title"></h1>
+    <p class="mq-meta">
+      <span data-kn-text="year"></span>
+      <span class="mq-rated" data-kn-text="officialRating"></span>
+      <span class="mq-star" data-kn-text="rating"></span>
+      <span data-kn-text="genresLabel"></span>
+    </p>
+    <p class="mq-tagline" data-kn-text="tagline"></p>
+    <div class="mq-actions" data-kn-focus-group="actions">
+      <button class="mq-btn mq-btn-play" data-kn-if="canPlay" data-kn-action="play" data-kn-text="playLabel" data-kn-focus-default></button>
+      <button class="mq-btn mq-btn-ghost" data-kn-action="toggle-played" data-kn-text="playedLabel"></button>
+    </div>
+    <p class="mq-overview mq-overview-full" data-kn-text="overview"></p>
+  </div>
+
+  <section class="mq-section" data-kn-if="hasSeasons">
+    <div class="mq-season-bar">
+      <nav class="mq-seasons" aria-label="Seasons" data-kn-focus-group="seasons">
+        <a class="mq-season" data-kn-each="seasons" data-kn-link="season" data-kn-text="label"></a>
+      </nav>
+      <select class="mq-select mq-season-select" data-kn-select="season" aria-label="Season"></select>
+    </div>
+    <ol class="mq-episodes">
+      <li data-kn-each="episodes"><a class="mq-episode" data-kn-link="play" data-kn-use="episode"></a></li>
+    </ol>
+    <p class="mq-hint" data-kn-if="!hasEpisodes">No episodes in this season yet.</p>
+  </section>
+  <div data-kn-slot="extras"></div>
+</article>

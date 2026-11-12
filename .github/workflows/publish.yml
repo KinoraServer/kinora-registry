@@ -1,0 +1,56 @@
+name: Publish
+
+# Builds the registry and pushes it to the `published` branch, which is what
+# Kinora servers read. Versions that are already there are never rebuilt.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Rust
+        run: |
+          rustup toolchain install stable --profile minimal
+          rustup default stable
+          rustup target add wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - name: Fetch the published registry
+        run: |
+          if git fetch --depth 1 origin published; then
+            git worktree add ../published FETCH_HEAD
+          else
+            git worktree add --detach ../published
+            git -C ../published checkout --orphan published
+            git -C ../published rm -rfq .
+          fi
+      - name: Build
+        env:
+          REGISTRY_SIGNING_KEY: ${{ secrets.REGISTRY_SIGNING_KEY }}
+        run: node scripts/build.mjs --previous ../published
+      - name: Push to the published branch
+        run: |
+          cd ../published
+          git rm -rfq --ignore-unmatch .
+          cp -R "$GITHUB_WORKSPACE/dist/." .
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing new to publish."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -qm "Publish ${GITHUB_SHA::7}"
+          git push origin HEAD:published
