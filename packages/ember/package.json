@@ -1,0 +1,10 @@
+{
+  "id": "ember",
+  "kind": "theme",
+  "name": "Ember",
+  "description": "A warm dark theme with an orange accent and rounder corners.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry"
+}

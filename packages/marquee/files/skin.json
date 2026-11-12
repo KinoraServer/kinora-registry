@@ -1,0 +1,18 @@
+{
+  "id": "marquee",
+  "name": "Marquee",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "description": "A big rotating hero, rails of landscape cards and full-bleed detail pages. Made for the living room.",
+  "skinApi": 1,
+  "styles": ["skin.css"],
+  "devices": ["phone", "tablet", "desktop", "tv"],
+  "player": "./player",
+  "theme": "marquee-dark",
+  "scheme": "dark",
+  "options": {
+    "hero-rotate": { "type": "bool", "label": "Rotate the hero", "default": true },
+    "card-size": { "type": "enum", "label": "Card size", "values": ["s", "m", "l"], "default": "m" },
+    "accent": { "type": "color", "label": "Accent colour (empty: the theme's)", "default": "" }
+  }
+}

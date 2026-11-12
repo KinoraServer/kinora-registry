@@ -1,0 +1,22 @@
+{
+  "id": "marquee-dark",
+  "name": "Marquee",
+  "author": "Kinora",
+  "scheme": "dark",
+  "tokens": {
+    "background": "#0c0c0e",
+    "foreground": "#f4f4f5",
+    "card": "#18181b",
+    "card-foreground": "#f4f4f5",
+    "muted": "#27272a",
+    "muted-foreground": "#a1a1aa",
+    "primary": "#e5484d",
+    "primary-foreground": "#ffffff",
+    "accent": "#2a2a2e",
+    "accent-foreground": "#f4f4f5",
+    "border": "#2e2e33",
+    "ring": "#ffffff",
+    "destructive": "#f2555a",
+    "radius": "0.375rem"
+  }
+}

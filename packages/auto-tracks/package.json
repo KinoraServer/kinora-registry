@@ -1,0 +1,37 @@
+{
+  "id": "auto-tracks",
+  "kind": "module",
+  "name": "Auto audio & subtitles",
+  "description": "Remembers the audio and subtitle tracks each viewer picks for a show and picks the closest match on every other episode, on every device.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry",
+  "recommended": true,
+  "module": {
+    "abi": 1,
+    "crate": "kinora-auto-tracks",
+    "provides": [
+      "track_selection"
+    ],
+    "permissions": {
+      "storage": true
+    },
+    "settings": [
+      {
+        "key": "library_fallback",
+        "label": "Use the library's last choice for new shows",
+        "kind": "bool",
+        "default": "true",
+        "help": "A show (or movie) you haven't picked tracks for yet starts with what you last picked in the same library, e.g. Japanese audio with English subtitles in an anime library. On by default."
+      },
+      {
+        "key": "per_season",
+        "label": "Remember per season",
+        "kind": "bool",
+        "default": "false",
+        "help": "Keep a separate choice for each season instead of one per show. A season without its own choice still uses the show's. Off by default."
+      }
+    ]
+  }
+}

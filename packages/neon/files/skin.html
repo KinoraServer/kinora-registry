@@ -1,0 +1,38 @@
+<!-- Everything with a data-kn-* attribute is wired to the player for you. -->
+<div class="top">
+  <button data-kn-action="back" aria-label="Back">&larr;</button>
+  <span class="title" data-kn-text="title"></span>
+  <button data-kn-action="info" aria-label="Playback info">i</button>
+</div>
+
+<div class="stats">
+  <span data-kn-text="method"></span> &middot;
+  <span data-kn-text="resolution"></span> &middot;
+  buffer <span data-kn-text="buffer"></span>
+</div>
+
+<button class="big" data-kn-action="play" aria-label="Play or pause">
+  <span class="icon-play">&#9654;</span><span class="icon-pause">&#10074;&#10074;</span>
+</button>
+
+<div class="bottom" data-kn-bar>
+  <div class="seek" data-kn-seek>
+    <div class="buffer" data-kn-buffer></div>
+    <div class="fill" data-kn-fill></div>
+    <div class="dot" data-kn-thumb></div>
+  </div>
+  <div class="row">
+    <button data-kn-action="skip-back" aria-label="Back 10 seconds">-10</button>
+    <button data-kn-action="skip-forward" aria-label="Forward 10 seconds">+10</button>
+    <button data-kn-action="mute" aria-label="Mute"><span class="vol-on">VOL</span><span class="vol-off">MUTE</span></button>
+    <div class="vol" data-kn-volume><div class="fill" data-kn-fill></div></div>
+    <span class="time"><span data-kn-text="time"></span> / <span data-kn-text="duration"></span></span>
+    <span class="grow"></span>
+    <select data-kn-select="audio" aria-label="Audio"></select>
+    <select data-kn-select="subtitles" aria-label="Subtitles"></select>
+    <button data-kn-action="subtitle-position" aria-label="SUB&varr; subtitle position">SUB&varr;</button>
+    <select data-kn-select="speed" aria-label="Speed"></select>
+    <button data-kn-action="pip">PiP</button>
+    <button data-kn-action="fullscreen">Full</button>
+  </div>
+</div>

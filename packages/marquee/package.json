@@ -1,0 +1,11 @@
+{
+  "id": "marquee",
+  "kind": "app-skin",
+  "name": "Marquee",
+  "description": "A big rotating hero, rails of landscape cards and full-bleed detail pages. Made for the living room.",
+  "version": "1.0.0",
+  "author": "Kinora",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/KinoraServer/kinora-registry",
+  "recommended": false
+}

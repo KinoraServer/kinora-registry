@@ -1,0 +1,23 @@
+{
+  "id": "ember",
+  "name": "Ember",
+  "author": "Kinora",
+  "scheme": "dark",
+  "tokens": {
+    "background": "oklch(0.17 0.015 40)",
+    "foreground": "oklch(0.96 0.01 70)",
+    "card": "oklch(0.22 0.02 40)",
+    "card-foreground": "oklch(0.96 0.01 70)",
+    "muted": "oklch(0.28 0.02 40)",
+    "muted-foreground": "oklch(0.74 0.03 60)",
+    "primary": "oklch(0.74 0.17 55)",
+    "primary-foreground": "oklch(0.18 0.03 40)",
+    "accent": "oklch(0.32 0.04 40)",
+    "accent-foreground": "oklch(0.96 0.01 70)",
+    "border": "oklch(0.32 0.025 40)",
+    "ring": "oklch(0.74 0.17 55)",
+    "destructive": "oklch(0.63 0.21 25)",
+    "radius": "1rem",
+    "font-sans": "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+  }
+}
